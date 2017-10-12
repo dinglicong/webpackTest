@@ -2,7 +2,7 @@
   "name": "webpackTest",
   "scripts": {
     "dev": "webpack",
-    "server": "webpack-dev-server --port 8888 --open"
+    "server": "webpack-dev-server"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",

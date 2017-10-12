@@ -3,8 +3,10 @@ const uglify = require('uglifyjs-webpack-plugin');
 const htmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
+var portDefault = 8084;
 var options = {
-	publicPath: 'http://10.10.10.5:8083/'
+	publicPath: 'http://10.10.10.5:' + portDefault + '/'
 }
 
 module.exports = {
@@ -33,7 +35,9 @@ module.exports = {
 				use: [{
 					loader: 'url-loader',
 					options: {
-						limit: 5000
+						limit: 5000,
+						//图片如果过大，图片输出路径，
+						outputPath: 'images/'
 					}
 				}]
 			}
@@ -57,8 +61,8 @@ module.exports = {
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, 'dist'),
-//		host: '10.10.10.5',
-//		compress: true,
-//		port: 8083
+		host: '10.10.10.5',
+		compress: true,
+		port: portDefault
 	}
 }
