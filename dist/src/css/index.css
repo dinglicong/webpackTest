@@ -1,0 +1,4 @@
+*{margin:0;padding: 0};
+html,body{width: 100%;height: 100%;}
+body{background-color: #bfe100;color: white;}
+.img{width: 200px;height: 200px;background: url(http://10.10.10.5:8083/d908d54a84859820387e9b44f38326c5.jpg) center center no-repeat;}
