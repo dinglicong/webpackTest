@@ -1,0 +1,11 @@
+$fn18: 18px;
+$borderDefault: #cdcdcd;
+
+.box{
+    padding: 5px;
+    border: 1px solid $borderDefault;
+    .txt{
+        color: white;
+        font-size: $fn18;
+    }
+}

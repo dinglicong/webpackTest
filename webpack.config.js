@@ -31,6 +31,21 @@ module.exports = {
 //				exinclude
 			},
 			{
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract({
+					/*
+					 * loader(e.g 'style-loader') that should be used when the CSS is not extracted (i.e. in an additional chunk when allChunks: false)
+					 */
+					//当样式文件不需要被提取的时候，需要用fallback: 'style-loader'
+					//fallback: 'style-loader',
+					use: [{
+						loader: 'css-loader'
+					},{
+						loader: 'sass-loader'
+					}]
+				})
+			},
+			{
 				test: /\.(png|jpg|gif)/,
 				use: [{
 					loader: 'url-loader',
